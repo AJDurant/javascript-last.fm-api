@@ -667,8 +667,8 @@ function LastFM(options){
 			if(params.constructor.toString().indexOf("Array") != -1){
 				var p = {};
 
-				for(i in params){
-					for(j in params[i]){
+				for(var i in params){
+					for(var j in params[i]){
 						p[j + '[' + i + ']'] = params[i][j];
 					}
 				}

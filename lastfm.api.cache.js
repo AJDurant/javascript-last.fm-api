@@ -7,14 +7,14 @@
 /* Set an object on a Storage object. */
 Storage.prototype.setObject = function(key, value){
 	this.setItem(key, JSON.stringify(value));
-}
+};
 
 /* Get an object from a Storage object. */
 Storage.prototype.getObject = function(key){
 	var item = this.getItem(key);
 
 	return JSON.parse(item);
-}
+};
 
 /* Creates a new cache object. */
 function LastFMCache(){
@@ -49,7 +49,7 @@ function LastFMCache(){
 	var name = 'lastfm';
 
 	/* Create cache if it doesn't exist yet. */
-	if(localStorage.getObject(name) == null){
+	if(localStorage.getObject(name) === null){
 		localStorage.setObject(name, {});
 	}
 
@@ -124,4 +124,4 @@ function LastFMCache(){
 	this.clear = function(){
 		localStorage.setObject(name, {});
 	};
-};
+}
