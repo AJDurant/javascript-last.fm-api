@@ -352,19 +352,6 @@ function LastFM(options){
 
 		getToken : function(callbacks){
 			signedCall('auth.getToken', null, null, callbacks);
-		},
-
-		/* Deprecated. Security hole was fixed. */
-		getWebSession : function(callbacks){
-			/* Save API URL and set new one (needs to be done due to a cookie!). */
-			var previuousApiUrl = apiUrl;
-
-			apiUrl = 'http://ext.last.fm/2.0/';
-
-			signedCall('auth.getWebSession', null, null, callbacks);
-
-			/* Restore API URL. */
-			apiUrl = previuousApiUrl;
 		}
 	};
 
