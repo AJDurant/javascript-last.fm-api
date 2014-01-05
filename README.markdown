@@ -23,16 +23,10 @@ actions on that account in a manner that is secure for last.fm users. All
 write services require authentication.
 
 
-###Write methods
-
-Due to technical restrictions it's not possible to get a response when calling
-write methods. Reading responses is only possible using HTTP Access-Control,
-which is currently not supported by the last.fm API.
-
-
 ###Submissions
 
-Scrobbling is not yet supported.
+Scrobbling is possible once a user is authenticated by adding their session 
+data to the api call.
 
 
 ###Usage
@@ -40,17 +34,23 @@ Scrobbling is not yet supported.
 You need to add the following scripts to your code in order to work with the
 JavaScript last.fm API:
 
-  <script type="text/javascript" src="lastfm.api.md5.js"></script>
-    <script type="text/javascript" src="lastfm.api.js"></script>
+  <script src="lastfm.api.md5.js"></script>
+    <script src="lastfm.api.js"></script>
+
+The API depends upon jQuery for sending AJAX requests:
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+For older browser support (IE 6, 7 & 8) use the 1.x version of jQuery.
 
 If you want to use caching, you need to add another script:
 
-    <script type="text/javascript" src="lastfm.api.cache.js"></script>
+    <script src="lastfm.api.cache.js"></script>
 
 Built in JSON support should be available in modern browsers, if you want to
 be sure it's supported, include the following:
 
-    <script type="text/javascript" src="json2.js"></script>
+    <script src="json2.js"></script>
 
 You can get that file at http://www.json.org/json2.js , and make sure you've
 removed the first line before using it.
