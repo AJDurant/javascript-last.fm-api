@@ -34,12 +34,12 @@ data to the api call.
 You need to add the following scripts to your code in order to work with the
 JavaScript last.fm API:
 
-  <script src="lastfm.api.md5.js"></script>
+    <script src="lastfm.api.md5.js"></script>
     <script src="lastfm.api.js"></script>
 
 The API depends upon jQuery for sending AJAX requests:
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 For older browser support (IE 6, 7 & 8) use the 1.x version of jQuery.
 
