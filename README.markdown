@@ -74,6 +74,36 @@ Now you can use the JavaScript last.fm API like this:
       /* Show error message. */
     }});
 
+###Example
+
+Example application code / more useful wrapper functions can be found in lastfm.js
+this includes specific functions for easily calling updateNowPlaying and scrobble
+and setting up the session.
+
+The code in here relies upon jquery.cookie plugin for persistant sessions.
+
+The toggle scrobble button functionality uses jqueryUI on:
+
+    <input type="checkbox" id="toggleScrobble"><label for="toggleScrobble">Scrobble</label>
+
+With the CSS:
+
+    .toggleScrobble {
+        border: none;
+        background: none;
+    }
+    .toggleScrobble .ui-button-text {
+        width: 80px;
+        height: 28px;
+        padding: 0;
+        background: url(http://cdn.last.fm/flatness/badges/lastfm_black_small.gif);
+    }
+    .toggleScrobble .ui-button-text:hover,
+    .toggleScrobble .ui-button-text:active,
+    .toggleScrobble.ui-state-hover .ui-button-text,
+    .toggleScrobble.ui-state-active .ui-button-text {
+        background: url(http://cdn.last.fm/flatness/badges/lastfm_red_small.gif);
+    }
 
 ###More
 
